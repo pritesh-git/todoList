@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+const App = () => {
+  const [val, setVal] = useState('')
+  const [list, setList] = useState([])
 
-function App() {
+  const handleSubmit = evnt => {
+    if (val !== '') {
+      setList(prevValue => {
+        return [...prevValue, val]
+      })
+      setVal('')
+    }
+  }
+  const itemEvent = event => {
+    setVal(event.target.value)
+  }
+
+  const handleRemove = evnt => {
+    var temp = list
+    temp.splice(evnt.target.id, 1)
+    setList([...temp])
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <div className="form">
+        <input type="text" value={val} onChange={itemEvent} />
+        <button onClick={handleSubmit}> + </button>
+      </div>
+      <ol>
+        {list.map((val, i) => (
+          <li id={i}>
+            <button id={i} onClick={handleRemove}>
+              X
+            </button>
+            {val}
+          </li>
+        ))}
+      </ol>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
