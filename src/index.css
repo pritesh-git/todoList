@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #bee4af;
+  text-align: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main {
+  margin: auto;
+  margin-top: 5vh;
+  background-color: #edf5e1;
+  border: 2px blue solid;
+  border-radius: 30px;
+  width: 30vw;
+  min-height: 75vh;
+}
+
+.main .form {
+  margin: auto;
+  margin-top: 5vh;
+  width: 80%;
+}
+
+.main .form input {
+  border: none;
+  width: 70%;
+  border-bottom: 2px solid;
+  outline: none;
+  background: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: large;
+}
+
+.main .form button {
+  min-height: 40px;
+  border-radius: 50%;
+  background-color: greenyellow;
+  padding: 5px 15px;
+  color: white;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  box-shadow: 5px 5px 15px -5px black;
+}
+
+.main ol {
+  text-align: left;
+  width: 30%;
+  margin: 5% 0;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+main ol,
+li {
+  margin: 10px 0;
+  font-size: larger;
+}
+
+main ol,
+button {
+  min-height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  padding: 5px 10px;
+  color: white;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+}
